@@ -1,8 +1,10 @@
 import './Formulario.css'
 import CampoTexto from '../CampoTexto';
 import ListaSuspensa from '../ListaSuspensa';
+import Botao from '../Botao';
+import { useState } from 'react';
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const time = [
         'Programação',
@@ -13,14 +15,53 @@ const Formulario = () => {
         'Inovação e Gestão'
     ]
 
+    const [nome, setNome] = useState('')
+    const [cargo, setCargo] = useState('')
+    const [imagem, setImagem] = useState('')
+    const [times, setTimes] = useState('')
+
+    const aoSalvar = (evento) => {
+        evento.preventDefault()
+        props.aoColaboradorCadastrado({
+            nome,
+            cargo,
+            imagem,
+            times
+        })
+    }
+
     return (
         <section className="formulario">
-            <form>
+            <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para Criar o Card do Colaborador</h2>
-                <CampoTexto label="Nome" placeholder="Digite seu nome" />
-                <CampoTexto label="Cargo" placeholder="Digite seu cargo" />
-                <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
-                <ListaSuspensa itens ={time} label="Equipes"/>
+                <CampoTexto
+                     obrigatorio={true} 
+                     label="Nome" 
+                     placeholder="Digite seu nome"
+                     valor={nome}
+                     aoAlterado={valor => setNome(valor)}
+                     />
+                <CampoTexto 
+                    obrigatorio={true} 
+                    label="Cargo" 
+                    placeholder="Digite seu cargo" 
+                    valor={cargo}
+                    aoAlterado={valor => setCargo(valor)}
+                    />
+                <CampoTexto 
+                    label="Imagem" 
+                    placeholder="Digite o endereço da imagem"
+                    valor={imagem}
+                    aoAlterado={valor => setImagem(valor)}
+                />
+                <ListaSuspensa 
+                    obrigatorio={true} 
+                    itens ={time} 
+                    label="Equipes"
+                    valor={times}
+                    aoAlterado={valor => setTimes(valor)}
+                />
+                <Botao texto='Criar Card'/>
             </form>
         </section>
     );
