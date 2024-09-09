@@ -1,0 +1,18 @@
+.footer {
+    background: #6278F7;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    padding: 50px;
+    align-items: center;
+}
+
+.footer ul li {
+    display: inline;
+    justify-content: space-around;
+    margin: 15px;
+}
+
+.footer p {
+    font-size: 20px;
+}
