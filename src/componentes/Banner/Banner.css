@@ -13,15 +13,11 @@
 
 .Titulo  {
     margin: auto 0;
-    font-size: 40px;
+    font-size: 32px;
     font-style: oblique;
     color: #fff;
 }
 
 .banner img {
-    max-height: 50vh;
-}
-
-.banner h1 {
     max-height: 50vh;
 }
