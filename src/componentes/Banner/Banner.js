@@ -3,7 +3,12 @@ function Banner () {
     // JSX
     return(
         <header className= "banner">
-       <img src="/imagens/banner.png"  alt="banner principal da pagina organo"/>
+            <div className="Titulo">
+                <h1>Cadastre a sua equipe para essa viagem espacial</h1>
+            </div>
+            <div>
+                <img src="/imagens/Astronauta.svg"  alt="banner principal da pagina organo"/>
+            </div>
        </header>
     )
 }

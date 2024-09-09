@@ -46,14 +46,14 @@ const Formulario = (props) => {
                     />
                 <CampoTexto 
                     label="Imagem" 
-                    placeholder="Digite o endereço da imagem"
+                    placeholder="ex:https://github.com/washingtontrevizan.png"
                     valor={imagem}
                     aoAlterado={valor => setImagem(valor)}
                 />
                 <ListaSuspensa 
                     obrigatorio={true} 
                     itens ={props.nomeDosTimes} 
-                    label="Equipes"
+                    label="Time"
                     valor={times}
                     aoAlterado={valor => setTimes(valor)}
                 />

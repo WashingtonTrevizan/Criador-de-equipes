@@ -9,32 +9,32 @@ function App() {
 
   const time = [
     {
-    nome: 'Programação',
+    nome: 'Mecânica do Voo',
     corPrimaria:'#57c278',
     corSecundaria: '#d9f7e9'
   },
   {
-    nome: 'Front-End',
+    nome: 'Ambiente Espacial',
     corPrimaria:'#82cffa',
     corSecundaria: '#e8f8ff'
   },
   {
-    nome: 'Data Science',
+    nome: 'Estruturas Aeroespaciais',
     corPrimaria:'#a6d157',
     corSecundaria: '#F0F8E2'
   },
   {
-    nome: 'Devops',
+    nome: 'Engenharia Aeroespacial',
     corPrimaria:'#E06B69',
     corSecundaria: '#fde7e8'
   },
   {
-    nome: 'UX e Desing',
+    nome: 'Piloto de Aeronaves',
     corPrimaria:'#DB6EBF',
     corSecundaria: '#FAE9F5'
   },
   {
-    nome: 'Inovação e Gestão',
+    nome: 'Tecnologia da Informação',
     corPrimaria:'#FFBA05',
     corSecundaria: '#FFEEDF'
   }
